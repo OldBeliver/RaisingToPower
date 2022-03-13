@@ -13,7 +13,7 @@ namespace RaisingToPower
             int value = 2;
             int power = 0;
             double calculatedNumber = 0;
-            int maxValue = 1024;
+            int maxValue = 32768;
 
             Random rand = new Random();
             int givenNumber = rand.Next(maxValue);
@@ -31,7 +31,7 @@ namespace RaisingToPower
                     doFind = false;                   
                 }                                
             }
-            Console.WriteLine($"заданное число: {givenNumber}");
+            Console.WriteLine($"заданное число: {givenNumber.ToString("N0")}");
             Console.WriteLine($"двойка в степени {power}\n{givenNumber.ToString("N0")}<{calculatedNumber.ToString("N0")}");
         }
     }
