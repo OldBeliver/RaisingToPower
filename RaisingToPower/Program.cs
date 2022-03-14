@@ -17,20 +17,14 @@ namespace RaisingToPower
 
             Random rand = new Random();
             int givenNumber = rand.Next(maxValue);
-
-            bool doFind = true;
-
-            while (doFind)
-            {   
+            
+            while(givenNumber >= calculatedNumber)
+            {
                 calculatedNumber = Math.Pow(value, power);
                 power++;
-
-                if (givenNumber < calculatedNumber)
-                {
-                    power--;
-                    doFind = false;                   
-                }                                
             }
+            power--;
+
             Console.WriteLine($"заданное число: {givenNumber.ToString("N0")}");
             Console.WriteLine($"двойка в степени {power}\n{givenNumber.ToString("N0")}<{calculatedNumber.ToString("N0")}");
         }
